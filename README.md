@@ -6,10 +6,10 @@ PORTFOLIO
 
   SKILLS
   
- SQL
- Creating test cases
- Reporting bugs
- GIT
+ - SQL
+ - Creating test cases
+ - Reporting bugs
+ - GIT
  
   CERTIFICATES
  ISTQB® Certified Tester Foundation Level
