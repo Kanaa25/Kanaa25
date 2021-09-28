@@ -12,7 +12,7 @@ PORTFOLIO
  - GIT
  
   CERTIFICATES
- ISTQB® Certified Tester Foundation Level
+ - ISTQB® Certified Tester Foundation Level
  
  
  
