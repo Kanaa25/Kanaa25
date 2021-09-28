@@ -19,7 +19,9 @@ PORTFOLIO
    My test cases examples
 - [Test cases for aeterie.com](https://github.com/Kanaa25/Testing/blob/main/Test%20cases.xlsx).
 - [Test cases for spozywczo.pl ](https://github.com/Kanaa25/Testing/blob/main/Test%20cases%20nr%202.xlsx).
-   My bug reports
+  
+  
+  My bug reports
 - [Bug in spozywczo.pl](https://github.com/Kanaa25/Testing/blob/main/Bug%20report.xlsx).
 
 
