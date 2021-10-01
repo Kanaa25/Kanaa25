@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Kanaa25
+- 👋 Hi, I’m Karolina
 - 👀 I’m interested in software testing
 - 🌱 I’m currently learning GIT
 
