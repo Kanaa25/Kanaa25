@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Karolina
 - 👀 I’m interested in software testing
-- 🌱 I’m currently learning GIT
+- 🌱 I’m currently learning REST API testing and JAVA
 
 PORTFOLIO
 
@@ -10,9 +10,24 @@ PORTFOLIO
  - Creating test cases
  - Reporting bugs
  - GIT
+
+  TOOLS 
+
+ - TestLink
+ - IntelliJ
+ - Postman
+ - GitHub
+ - phpMyAdmin
  
   CERTIFICATES
  - ISTQB® Certified Tester Foundation Level
+
+  EVENTS
+- Test Warez 2021
+
+BOOKS
+
+- Radosław Smilgin "Zawód Tester. Od decyzji do pierwszych kroków w pracy."
  
  
  
