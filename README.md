@@ -26,6 +26,7 @@ PORTFOLIO
 
   EVENTS
 - Test Warez 2021
+- Test Dive 2021
 
 BOOKS
 
@@ -39,6 +40,9 @@ BOOKS
 
  ## Test automation example
 - [Creating a new user test](https://github.com/Kanaa25/Testing/blob/main/Automation%20test%20example/src/pl/testtest/Main.java)
+
+## REST API test example POSTMAN
+- [Dummy api test](https://github.com/Kanaa25/Testing/blob/a54a8505faa044fbcd2073e8bd5fb5cfc0f41f39/rest%20api%20postman/Dummy%20api%20tests.postman_collection.json)
 
  ## My bug reports
 - [Bug report for spozywczo.pl](https://github.com/Kanaa25/Testing/blob/main/Bug%20report.xlsx)
