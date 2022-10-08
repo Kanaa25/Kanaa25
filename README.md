@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Karolina
 - 👀 I’m interested in software testing
-- 🌱 I’m currently learning REST API testing and Java (for test automation)
+
 
 PORTFOLIO
 
