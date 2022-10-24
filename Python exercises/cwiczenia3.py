@@ -119,8 +119,6 @@ for i in range(1, 61):
 # }
 print("Exercise 18")
 
-
-
 dictionary = {
     "questions": [],
     "exclamations": [],
