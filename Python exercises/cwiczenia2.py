@@ -12,7 +12,8 @@ dictionary2 = {
     'Phone number': "123 - 123 - 123"
 }
 
-print("First:" + str(dictionary1), "Second:" + str(dictionary2))
+print(f"First: {dictionary1.get('Name')} phone number: {dictionary1.get('Phone number')}" '\n'
+      f"Second: {dictionary2.get('Name')} phone number: {dictionary2.get('Phone number')}")
 
 # Create a list of  dictionaries that describe a worker (his name/surname, position, project etc). Print one of the worker’s information.
 # There is a string that describes employee information, e.g.:
@@ -24,17 +25,17 @@ print("First:" + str(dictionary1), "Second:" + str(dictionary2))
 
 print("Exercise 9")
 
-First = {
-    "Name": "Lilly",
-    "Surname": "Brown",
-    "Position": "QA Engineer",
-    "Project": "Samsung"
+first = {
+    'Name': "Lilly",
+    'Surname': "Brown",
+    'Position': "QA Engineer",
+    'Project': "Samsung"
 }
 
-print("Position:" + str(First.get("Position")))
+print(f"Position: {first.get('Position')}")
 
-print("Name:" + str(First.get("Name")), "Surname:" + str(First.get("Surname")),
-      "Position:" + str(First.get("Position")), "Project:" + str(First.get("Project")))
+print("Name:" + str(first.get("Name")), "Surname:" + str(first.get("Surname")),
+      "Position:" + str(first.get("Position")), "Project:" + str(first.get("Project")))
 
 # You have a dictionary of dicitionaries:
 # {
@@ -65,7 +66,7 @@ carList = {
 }
 
 print("You picked `" + list(carList.keys())[1] + "`. Selected color: " + carList.get("Seat Leon").get("color") +
-      ", year of production: " +str(carList.get("Seat Leon").get("year")))
+      ", year of production: " + str(carList.get("Seat Leon").get("year")))
 
 # Create a dictionary that describes your laptop technical details (e.g. RAM, hard drive capacity etc.) Using the
 # get() method of dictionaries print out existing and missing information. You should use get() at least once for
@@ -80,10 +81,9 @@ myLaptop = {
 }
 myLaptop.setdefault("Size", "Default size 1")
 
-
 print("My laptop name: " + str(myLaptop.get("Name")) + ". My laptop RAM: " + str(myLaptop.get("RAM")) + ". My laptop "
-      "weight: " + str(myLaptop.get("weight")) + ". My laptop size: " + str(myLaptop.get("Size")))
-
+                                                                                                        "weight: " + str(
+    myLaptop.get("weight")) + ". My laptop size: " + str(myLaptop.get("Size")))
 
 # You have a string: “My name is Bob”. Using [:], split() and append() methods, create a string that replaces Bob with your name.
 print("Exercise 12")
@@ -96,7 +96,6 @@ changedText.append("Karolina")
 
 print(changedText[0], changedText[1], changedText[2], changedText[4])
 
-
 # Think about 7 favourite dishes that you like. Now, you have to create a schedule of eating them each day. Create a
 # dictionary with 7 keys (names of week days). For each key the value will be a dictionary containing the name of
 # your favourite dish and list of ingredients that you have to buy to cook it.
@@ -104,23 +103,23 @@ print("Exercise 13")
 # Try to print out ingredients for different days of the week.
 
 dishes = {
-    "Monday" : {
-        "name" : "jajecznica",
-        "ingredients" : ["jajko", "sol", "pieprz", "szczypiorek"]
+    "Monday": {
+        "name": "jajecznica",
+        "ingredients": ["jajko", "sol", "pieprz", "szczypiorek"]
     },
-    "Tuesday" : {
-        "name" : "tosty",
-        "ingredients" : ["chleb", "maslo", "szynka"]
+    "Tuesday": {
+        "name": "tosty",
+        "ingredients": ["chleb", "maslo", "szynka"]
     },
-    "Wednesday" : {
+    "Wednesday": {
         "name": "kanapki",
         "ingredients": ["bulki", "margaryna", "ser"]
     },
-    "Thursday" : {
+    "Thursday": {
         "name": "owsianka",
         "ingredients": ["banan", "platki"]
     },
-    "Friday" : {
+    "Friday": {
         "name": "kawa",
         "ingredients": ["ziarno", "woda", "mleko"]
     },
@@ -128,9 +127,6 @@ dishes = {
 
 for day in dishes:
     print("day: " + day + " ingredients: " + str(dishes.get(day).get("ingredients")))
-
-
-
 
 # You have a list of foods, but you don’t know the order of the items (meaning that it can be: [“Strawberries”,
 # “Potatoes”, “Karkóweczka”] or [“Potatoes”, “Karkóweczka”, “Strawberries”, “Sausage”]. Find your favourite food

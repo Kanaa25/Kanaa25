@@ -141,7 +141,6 @@ print(days(my_month))
 print("Exercise 28")
 import time
 
-print("Exercise 27")
 print("Please, enter time: ")
 my_time_str = input()
 
