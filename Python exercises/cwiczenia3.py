@@ -4,43 +4,50 @@
 # file path.
 print("Exercise 14")
 
-file = open("nowy 1.txt")
-print(file.read())
+name = 'Karolina'
 
-name = "Karolina"
+print("Put file name:")
+filename = 'nowy 1.txt'#input()
 
-if file == name:
+file = open(filename)
+content = file.read()
+
+for line in content.splitlines():
+    if not (name in line):
+        print(line)
+
+if name in content:
     print("Karolina is in the file")
 else:
     print("Karolina is not in the file")
 
 file.close()
+
 #
 # # Using loops and conditionals create a dictionary that contains month name and amount of days in that month for year
 # # 2018.
 print("Exercise 15")
 
 year2018 = {
-    "January": 0,
-    "February": 0,
-    "March": 0,
-    "April": 0,
-    "May": 0,
-    "June": 0,
-    "July": 0,
-    "August": 0,
-    "September": 0,
-    "October": 0,
-    "November": 0,
-    "December": 0
+    "January": None,
+    "February": None,
+    "March": None,
+    "April": None,
+    "May": None,
+    "June": None,
+    "July": None,
+    "August": None,
+    "September": None,
+    "October": None,
+    "November": None,
+    "December": None
 }
-
 monthNo = 1
 
 for month in year2018:
     if month == "February":
         year2018[month] = 28
-    elif monthNo in [1, 3, 5, 7, 8, 10, 12]:
+    elif monthNo in (1, 3, 5, 7, 8, 10, 12):
         year2018[month] = 31
     else:
         year2018[month] = 30
@@ -56,35 +63,28 @@ print(year2018)
 #
 print("Exercise 16")
 
-myDictionary = [
+my_dictionary = [
     {
-        "id": "123218736",
-        "username": "John smith",
-        "department": "IT",
+        'id': '123218736',
+        'username': 'John smith',
+        'department': 'IT',
     },
     {
-        "Id": "83742638476",
-        "username": "Kate White",
-        "department": "Engineering"
+        'Id': '83742638476',
+        'username': 'Kate White',
+        'department': 'Engineering'
     },
 ]
 
-for i in range(0, len(myDictionary)):
-    name = myDictionary[i]["username"].split(" ")[0]
-    myDictionary[i]["name"] = name
-    surname = myDictionary[i]["username"].split(" ")[1]
-    myDictionary[i]["surname"] = surname
-    del myDictionary[i]["username"]
-    print(myDictionary[i].get("name") + " " + myDictionary[i].get("surname") + " " + myDictionary[i].get("department"))
 
-# name = myDictionary[0]["username"].split(" ")[0]
-# myDictionary[0]["name"] = name
-# del myDictionary[0]["username"]
-#
-# name = myDictionary[1]["username"].split(" ")[0]
-# myDictionary[1]["name"] = name
-# del myDictionary[1]["username"]
+for dict in my_dictionary:
+    name = dict["username"].split(" ")[0]
+    dict["name"] = name
+    surname = dict["username"].split(" ")[1]
+    dict["surname"] = surname
+    del dict["username"]
 
+    print(f"{dict.get('name')} {dict.get('surname')} {dict.get('department')}")
 
 # Create a “clock” that will print “Tick” each second for 1 minute. Output “5 seconds” each 5 “ticks”.
 #
@@ -171,7 +171,7 @@ print("ALARM!")
 # Hints: you can use 4 for loops for this task.
 
 
-print("Exercise 19")
+print("Exercise 20")
 
 for i in range(5):
     print("*" * (i + 1))
@@ -194,26 +194,26 @@ for i in range(6):
 #
 import os
 
-print("Exercise 20")
+print("Exercise 21")
 
 print("Which employee do you need?")
 worker = input()
 
 files = ["employee1.txt", "employee2.txt", "employee3.txt"]
 
-for fileName in files:
-    file = open(fileName)
+for file_name in files:
+    file = open(file_name)
     file_content = file.read()
 
     if file_content.find(worker) >= 0:
         print(os.path.realpath(file.name))
         lines = file_content.splitlines()
         for line in lines:
-            if line.find(worker) >= 0:
-                print("** " + line + " **")
+            if worker in line:
+                print(f"** {line} **")
             else:
                 print(line)
-
+    file.close()
 
 # employee1 = open("employee1.txt")
 # employee1_content = employee1.read()
