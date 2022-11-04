@@ -74,12 +74,13 @@ car_list = {
         'color': 'Desire red'
     }
 }
+print("Please select car:")
+selected_car = input()
 
-items = car_list['Seat Leon'].items()
-print("You picked `Seat Leon`", end=' ')
-for i in items:
-    print(f"'{i[0]}': '{i[1]}'", end=', ')
-print()
+items = car_list.items()
+for i, j in items:
+    if selected_car == i:
+        print(f"You picked: {i}. Selected color: {j['color']}, year of production: {j['year']}")
 
 # Create a dictionary that describes your laptop technical details (e.g. RAM, hard drive capacity etc.) Using the
 # get() method of dictionaries print out existing and missing information. You should use get() at least once for
