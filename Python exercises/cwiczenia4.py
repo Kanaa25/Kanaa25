@@ -207,3 +207,30 @@ def filereading(file):
              return("Verification passed")
 
 print(filereading(file))
+
+
+# Write a program (using functions) that will allow you to store different life events (e.g. birthdays).
+#
+# Program interface:
+# what can I do for you?
+#    * help
+#    * add reminder
+#    * display events
+#    * display events for given date
+#    * display events for given name
+#
+# When you input “help”, program should output help information that explains that you can pick one of the following commands:
+# ●	Add reminder
+# ●	Display events
+# ●	Save event
+#
+# Add reminder will allow you to input date and event name. Example:
+# >>> What can I do for you?
+# add reminder
+# >>> on which date?
+# 30/05/2017
+# >>> please, enter event name:
+# Birthday of Bob
+# >>> event saved
+# >>> What can I do for you?
+# …
