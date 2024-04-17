@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "03b2e965-63e9-4cba-9b40-9ddb1500878e",
+		"name": "json placeholder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26098442"
+	},
+	"item": [
+		{
+			"name": "Get users list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Adding user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get posts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is a valid JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Response contains posts by user 1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.above(0);\r",
+							"    pm.expect(jsonData[0]).to.have.property(\"userId\", 1);\r",
+							"});\r",
+							"pm.test(\"Each post has a unique ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var ids = jsonData.map(function (post) { return post.id; });\r",
+							"    pm.expect(ids.length).to.eql(new Set(ids).size);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body length of each post does not exceed 500 characters\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    jsonData.forEach(function (post) {\r",
+							"        pm.expect(post.body.length).to.be.at.most(500);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Each post has required fields\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    jsonData.forEach(function (post) {\r",
+							"        pm.expect(post).to.have.property(\"userId\");\r",
+							"        pm.expect(post).to.have.property(\"id\");\r",
+							"        pm.expect(post).to.have.property(\"title\");\r",
+							"        pm.expect(post).to.have.property(\"body\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/1/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
